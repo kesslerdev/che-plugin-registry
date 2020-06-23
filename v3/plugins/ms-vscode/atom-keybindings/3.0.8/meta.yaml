@@ -8,7 +8,7 @@ title: Popular Atom keybindings for Visual Studio Code
 description: This extension ports popular Atom keyboard shortcuts to Visual Studio Code. After installing the extension and restarting VS Code your favorite keyboard shortcuts from Atom are now available.
 icon: https://github.com/microsoft/vscode-atom-keybindings/raw/master/atom-keyboard.png
 repository: https://github.com/microsoft/vscode-atom-keybindings
-category: Keymaps
+category: Editor
 firstPublicationDate: "2020-06-23"
 spec:
   extensions:
