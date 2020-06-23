@@ -1,0 +1,15 @@
+apiVersion: v2
+publisher: coenraads
+name: bracket-pair-colorizer-2
+version: 0.1.4
+type: VS Code extension
+displayName: Bracket Pair Colorizer 2
+title: A customizable extension for colorizing matching brackets
+description: This extension allows matching brackets to be identified with colours. The user can define which tokens to match, and which colours to use.
+icon: https://raw.githubusercontent.com/CoenraadS/Bracket-Pair-Colorizer-2/develop/images/icon.svg
+repository: https://github.com/CoenraadS/Bracket-Pair-Colorizer-2
+category: Editor
+firstPublicationDate: "2020-06-23"
+spec:
+  extensions:
+    - https://marketplace.visualstudio.com/_apis/public/gallery/publishers/coenraads/vsextensions/bracket-pair-colorizer-2/0.1.4/vspackage
