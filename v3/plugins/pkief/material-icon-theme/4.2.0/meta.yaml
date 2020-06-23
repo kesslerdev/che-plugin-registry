@@ -1,0 +1,14 @@
+apiVersion: v2
+publisher: pkief
+name: material-icon-theme
+version: 4.2.0
+type: VS Code extension
+displayName: Material Icon Theme
+title: Material Design Icons for Visual Studio Code
+description: Get the Material Design icons into your VS Code.
+icon: https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/master/logo.svg
+repository: https://github.com/PKief/vscode-material-icon-theme
+category: Theme
+spec:
+  extensions:
+    - https://marketplace.visualstudio.com/_apis/public/gallery/publishers/pkief/vsextensions/material-icon-theme/4.2.0/vspackage
