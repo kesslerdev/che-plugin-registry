@@ -35,12 +35,14 @@ RUN chmod -R g+rwX /build
 
 # Build registry, copying meta.yamls and index.json from builder
 FROM docker.io/httpd:2.4.43-alpine AS registry
-# Allow htaccess
-RUN sed -i 's|    AllowOverride None|    AllowOverride All|' /usr/local/apache2/conf/httpd.conf && \
+RUN apk add --no-cache bash && \
+    # Allow htaccess
+    sed -i 's|    AllowOverride None|    AllowOverride All|' /usr/local/apache2/conf/httpd.conf && \
     sed -i 's|Listen 80|Listen 8080|' /usr/local/apache2/conf/httpd.conf && \
     mkdir -p /var/www && ln -s /usr/local/apache2/htdocs /var/www/html && \
     chmod -R g+rwX /usr/local/apache2 && \
-    echo "ServerName localhost" >> /usr/local/apache2/conf/httpd.conf
+    echo "ServerName localhost" >> /usr/local/apache2/conf/httpd.conf && \
+    apk add --no-cache coreutils
 COPY README.md .htaccess /usr/local/apache2/htdocs/
 COPY --from=builder /build/v3 /usr/local/apache2/htdocs/v3
 COPY ./build/dockerfiles/entrypoint.sh /usr/bin/
